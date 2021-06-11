@@ -31,7 +31,7 @@ jobs:
         sudo apt install freecad
 
     - name: Download repository
-      uses: actions/checkout@v2i
+      uses: actions/checkout@v2
 
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@v3
