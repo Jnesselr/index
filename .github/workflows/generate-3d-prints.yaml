@@ -41,6 +41,7 @@ jobs:
     - name: Generate 3D files
       run:  |
         sudo chown runner:docker FreeCAD.AppImage
+        chmod +x FreeCAD.AppImage
         ./FreeCAD.AppImage --appimage-extract
         cd pnp/cad
         rm -rf 3D-Prints
