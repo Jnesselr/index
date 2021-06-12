@@ -38,11 +38,10 @@ jobs:
         target: "FreeCAD.AppImage"
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
-
     - name: Generate 3D files
       run:  |
+        sudo chown runner:docker FreeCAD.AppImage
+        ./FreeCAD.AppImage --appimage-extract
         cd pnp/cad
         rm -rf 3D-Prints
         mkdir 3D-Prints
