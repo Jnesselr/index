@@ -42,7 +42,7 @@ jobs:
       run:  |
         sudo chown runner:docker FreeCAD.AppImage
         chmod +x FreeCAD.AppImage
-        ./FreeCAD.AppImage --appimage-extract
+        ./FreeCAD.AppImage --appimage-extract > /dev/null
         cd pnp/cad
         rm -rf 3D-Prints
         mkdir 3D-Prints

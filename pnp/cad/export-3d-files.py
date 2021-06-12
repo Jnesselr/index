@@ -27,6 +27,9 @@ import MeshPart
 print('Python version:')
 print(sys.version)
 
+print('FreeCAD version:')
+print(FreeCAD.Version())
+
 
 def get_shape_placement(print_plane):
     map_mode = print_plane.MapMode
@@ -69,7 +72,7 @@ def process_file(cad_file: Path):
         for obj in doc.Objects:
             print(f"- {obj.Label}")
 
-        raise Exception("Body not found in model")
+        raise Exception(f"Body not found in model {name}")
 
     body = body[0]
 
